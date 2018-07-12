@@ -1,17 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lab'Connect</title>
 </head>
 
 <body>
-    <div id="anim"></div>
-    <script src='logo.js'></script>
+
+    <header>
+        <div id="anim">
+
+        </div>
+        <h1>Lab'Connect</h1>
+        <div class="burger">
+            <svg width="100px" height="100px">
+                <path class="top" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80"></path>
+                <path class="middle" d="M 30 50 L 70 50"></path>
+                <path class="bottom" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20"></path>
+            </svg>
+        </div>
+        <div class="mask"></div>
+        <!-- <video autoplay src="video/logo3.mp4"></video> -->
+        <nav>
+            <a href="">La Team</a>
+            <a href="">Story</a>
+            <a href="">Work</a>
+            <a href="">Spirit</a>
+            <a class="contact-open" href="">Contact</a>
+
+        </nav>
+    </header>
+    <main>
+        <div class="cd-popup contact" role="alert">
+            <form name="contactform" id="contactform" class="contact-form">
+                <div class="cd-popup-container">
+                    <p>
+                        <a href="" class="cd-popup-close cd-close-button">
+                            <i class="fa fa-times" style="pointer-events:none;"></i>
+                        </a>
+                    </p>
+
+                    <div class="name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" />
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" />
+                    </div>
+                    <div class="message">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" name="message"></textarea>
+                    </div>
+                    <br>
+                    <div class="submit">
+                        <p class="user-message" id="contactMessage">Ecrivez-nous !</p>
+                        <input type="submit" name="submit" id="submit" value="Envoyer" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="cd-popup notification" role="alert">
+            <div class="cd-popup-container">
+                <a href="" class="cd-popup-close cd-close-button">
+                    <i class="fa fa-times" style="pointer-events:none;"></i>
+                </a>
+                <p>
+                    <h3 id="notification-text"></h3>
+                </p>
+            </div>
+        </div>
+       
+        <section id="team">
+                <h2>La Team</h2>
+            <figure>
+                <img src="https://picsum.photos/200/200/?random" alt="">
+                <figcaption>
+                    Sébastien Champalaune
+                    <br> 39 ans
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/200/200/?random" alt="">
+                <figcaption>
+                    Sébastien Champalaune
+                    <br> 39 ans
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="https://picsum.photos/200/200/?random" alt="">
+                <figcaption>
+                    Sébastien Champalaune
+                    <br> 39 ans
+                </figcaption>
+            </figure>
+        </section>
+     
+        <section id="story">
+                <h2>La Story</h2>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia pariatur sequi perspiciatis debitis. Exercitationem
+                    deserunt tempore tenetur quia nisi? Nostrum iure ipsa veritatis exercitationem earum aperiam, sint nam
+                    mollitia! Cupiditate sint, repellat illo autem voluptas veritatis, cumque fuga saepe placeat beatae ducimus,
+                    facere odio architecto eius natus. Nam, sapiente animi. Beatae cupiditate voluptates magni distinctio,
+                    inventore porro fugiat corrupti? Ipsa aliquam cupiditate quae excepturi, quia amet recusandae illum rem
+                    harum atque non error voluptatem quidem architecto perspiciatis veniam animi! Aliquid deleniti reprehenderit
+                    ex quaerat asperiores ut accusamus nesciunt pariatur. Consectetur ullam adipisci, laborum quaerat expedita
+                    nesciunt officiis nihil voluptate quibusdam impedit ex asperiores quia facilis perferendis quo saepe
+                    fuga odio at. Corrupti, delectus incidunt repudiandae tenetur illum distinctio ullam. Soluta, atque nemo
+                    ratione error quod excepturi laborum minima ea deserunt veritatis, deleniti, voluptates delectus necessitatibus
+                    similique consequuntur obcaecati molestias commodi debitis quia? Expedita, inventore qui ducimus id deserunt
+                    omnis? Molestias praesentium id a voluptates autem magnam, quisquam incidunt fuga vel soluta eos totam
+                    eaque architecto vero? Omnis consectetur adipisci asperiores animi, eaque officia, praesentium sequi
+                    deleniti, consequatur minus autem! Suscipit consequatur deserunt aliquam enim, odit repellat velit amet
+                    corporis illum, labore sint accusamus? Nisi dolor unde magnam, sed eligendi vel aspernatur assumenda!
+                    Qui, provident. Pariatur sed magnam voluptatem eaque. Vero, assumenda illo consectetur necessitatibus
+                    magnam quidem quo, debitis, officia sed nobis itaque ut provident a dolor quia eaque. Voluptatem, facere
+                    illum. Adipisci provident autem incidunt illo earum molestias omnis? Ullam eius accusantium voluptas
+                    aliquam blanditiis eos eveniet perspiciatis, natus quaerat cum delectus atque magni consequuntur modi
+                    autem totam, voluptatibus nobis dolorem consequatur enim? Numquam ipsum odit eos est dolores? Nisi beatae
+                    totam neque, autem, accusantium doloremque necessitatibus eos quasi et atque, deleniti inventore cum
+                    odio perspiciatis quibusdam in. Pariatur natus, sunt atque itaque magnam dolorem ducimus nemo repudiandae
+                    molestiae.
+                </p>
+            </article>
+        </section>
+      
+        <section id="spirit">
+                <h2>Notre Esprit</h2>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui animi nam expedita minima hic iusto provident dicta aut, et
+                    reiciendis sit sint perferendis quisquam voluptates corrupti quibusdam consectetur labore reprehenderit.Repellat
+                    rem sunt minima laboriosam odit modi rerum quasi officia velit vero quisquam molestias dolorem adipisci
+                    accusamus asperiores, iusto voluptatibus pariatur harum. Ab alias in, maxime numquam officia totam deserunt?
+                </p>
+            </article>
+        </section>
+      
+        <section id="work">
+                <h2>Nos Réalisations</h2>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/200/200/?random" alt="">
+                    <a href=""></a>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/200/200/?random" alt="">
+                    <a href=""></a>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/200/200/?random" alt="">
+                    <a href=""></a>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/200/200/?random" alt="">
+                    <a href=""></a>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/200/200/?random" alt="">
+                    <a href=""></a>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/200/200/?random" alt="">
+                    <a href=""></a>
+                </figure>
+            </article>
+        </section>
+        <div class="scrollTop">
+            <i class="fas fa-angle-double-up "></i>
+        </div>
+    </main>
+    <footer>
+        <h3>
+            <a class="contact-open" href="">Work With Us</a>
+        </h3>
+        <hr>
+        <div class="contact">
+            <h4>Adresse</h4>
+            <p class="adress">Lab'Connect
+                <br> 16 rue du Bocage
+                <br> 56000 Vannes </p>
+        </div>
+        <hr>
+        <div class="social">
+            <a href="">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="mentions">
+            <hr>
+            <p>&copy 2018 Lab'Connect
+                <br> Friendly Web Agency</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="logo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,14 @@
+//Style bouton
+
+@mixin btn {
+    display: block;
+    border: 1px solid $colorSite;
+    width: 20%;
+    padding: 15px 35px;
+    color: $colorSite;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    font-family: $font1;
+
+}

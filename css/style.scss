@@ -1,0 +1,36 @@
+/**
+ * Master sass file
+ */
+
+
+// only variables. Example : @primaryFont: 'Quicksand', sans-serif; @primaryColor: #FF0000;
+@import "variables";
+
+// only for reusable classes. Never used directly. Example : .drop-dhadow, .box-sizing...
+@import "mixins";
+
+//reset valeurs par défaut du navigateur
+
+@import "reset";
+
+// only for generic htmltags. Example : h1, h2, hn, p, button, a, ul, li, header, footer, nav, article...
+@import "htmltags";
+
+// Mobile First
+@import "mobilefirst";
+
+// Small devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	@import "tablets";
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	@import "desktops";
+}
+
+// Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	@import "largedesktops";
+}
+
