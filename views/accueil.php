@@ -1,61 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Lab'Connect</title>
-</head>
-
-<body>
-
-    <header>
-        <div id="anim">
-
-        </div>
-        <h1>Lab'Connect</h1>
-        <div class="burger">
-            <svg width="100px" height="100px">
-                <path class="top" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80"></path>
-                <path class="middle" d="M 30 50 L 70 50"></path>
-                <path class="bottom" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20"></path>
-            </svg>
-        </div>
-        <div class="mask"></div>
-        <!-- <video autoplay src="video/logo3.mp4"></video> -->
-        <nav>
-            <a href="">La Team</a>
-            <a href="">Story</a>
-            <a href="">Work</a>
-            <a href="">Spirit</a>
-            <a class="contact-open" href="">Contact</a>
-
-        </nav>
-    </header>
+<?php ob_start() ?>
     <main>
         <div class="cd-popup contact" role="alert">
-            <form name="contactform" id="contactform" class="contact-form">
+            <form method='post' action='Contact' name="contactform" id="contactform" class="contact-form">
                 <div class="cd-popup-container">
                     <p>
                         <a href="" class="cd-popup-close cd-close-button">
@@ -65,15 +11,15 @@
 
                     <div class="name">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" />
+                        <input type="text" id="name" name="nom" value='<?php if(isset($_POST["nom"])) echo $_POST["nom"] ?>' />
                     </div>
                     <div class="email">
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email" />
+                        <input type="text" id="email" name="email" value="<?php if(isset($_POST["email"])) echo $_POST["email"] ?>" />
                     </div>
                     <div class="message">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" name="message"></textarea>
+                        <textarea name="message" id="message" name="texte"><?php if(isset($_POST["texte"])) echo $_POST["texte"] ?></textarea>
                     </div>
                     <br>
                     <div class="submit">
@@ -152,7 +98,7 @@
         </section>
       
         <section id="spirit">
-                <h2>Notre Esprit</h2>
+                <h2>Spirit</h2>
             <article>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui animi nam expedita minima hic iusto provident dicta aut, et
@@ -206,36 +152,6 @@
             <i class="fas fa-angle-double-up "></i>
         </div>
     </main>
-    <footer>
-        <h3>
-            <a class="contact-open" href="">Work With Us</a>
-        </h3>
-        <hr>
-        <div class="contact">
-            <h4>Adresse</h4>
-            <p class="adress">Lab'Connect
-                <br> 16 rue du Bocage
-                <br> 56000 Vannes </p>
-        </div>
-        <hr>
-        <div class="social">
-            <a href="">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
-        <div class="mentions">
-            <hr>
-            <p>&copy 2018 Lab'Connect
-                <br> Friendly Web Agency</p>
-        </div>
-    </footer>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script src="logo.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="script.js"></script>
-</body>
 
-</html>
+<?php $content = ob_get_clean(); ?>
+<?php require('templates/template.php'); ?>

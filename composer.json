@@ -1,0 +1,15 @@
+{
+    "name": "rossi/lab",
+    "authors": [
+        {
+            "name": "rossi56000",
+            "email": "rossi56000@gitlab.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rossi56\\": "./"
+        }
+    },
+    "require": {}
+}

@@ -1,7 +1,7 @@
 /*----------------------BURGER-------------*/
 $(document).ready(function () {
-    $('.mask ,.burger').click(function () {
-        $('.mask').toggleClass('closed');
+    $('.mask ,.burger, .lien').click(function () {
+        $('.mask, .lien').toggleClass('closed');
         $('nav').toggleClass('nav-mobil');
         $('.burger').toggleClass('active');
     });
@@ -178,4 +178,3 @@ sr.reveal('h1', {
 sr.reveal('figure', {
     reset: true,
 }, 350);
-
