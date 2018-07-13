@@ -13,13 +13,8 @@
 // Mobile First
 @import "mobilefirst";
 // Small devices (tablets, 768px and up)
-@media (min-width: 768px) {
-	@import "tablets";
-}
-
+@import "tablets";
 // Medium devices (desktops, 992px and up)
 @import "desktops";
 // Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-	@import "largedesktops";
-}
+@import "largedesktops";

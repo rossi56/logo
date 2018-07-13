@@ -43,7 +43,6 @@
             </svg>
         </div>
         <div class="mask"></div>
-        <!-- <video autoplay src="video/logo3.mp4"></video> -->
         <nav>
             <a class="lien" href="#team">La Team</a>
             <a class="lien" href="#story">Story</a>

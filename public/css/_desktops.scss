@@ -57,8 +57,19 @@
             figure {
                 width: 30%;
                 margin-bottom: 150px;
-            margin-top: 100px;
-
+                margin-top: 100px;
+                display: flex;
+                align-items: center;
+                img {
+                    border-radius: 50%;
+                    width: 80%;
+                }
+                figcaption {
+                    color: black;
+                    font-size: 20px;
+                    font-family: $font1;
+                    margin-top: 15px;
+                }
             }
         }
         #story {
@@ -90,11 +101,14 @@
             }
             article {
                 width: 30%;
+                margin-bottom: 75px;
             }
         }
+        .user-message {
+            font-size: 45px;
+        }
     }
-    footer{
-      
+    footer {
+        margin-top: -50px;
     }
 }
-

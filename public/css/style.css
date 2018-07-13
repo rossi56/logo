@@ -471,13 +471,43 @@ main #team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+main #team figure {
+  width: 50%;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #team figure img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+main #team figure figcaption {
+  color: black;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 15px;
+}
+
 main #story {
+  width: 85%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,8 +516,8 @@ main #story {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   background: #93cede;
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #93cede), color-stop(38%, #93cede), color-stop(100%, #49a5bf));
   background: linear-gradient(135deg, #93cede 0%, #93cede 38%, #49a5bf 100%);
@@ -497,6 +527,12 @@ main #story {
 
 main #story h2 {
   color: white;
+  margin-top: 15px;
+}
+
+main #story p {
+  margin-top: 20px;
+  padding-bottom: 35px;
 }
 
 main #spirit {
@@ -515,6 +551,15 @@ main #spirit {
   -ms-flex-line-pack: distribute;
       align-content: space-around;
   border: 3px solid #f7d635;
+}
+
+main #spirit h2 {
+  margin-top: 15px;
+}
+
+main #spirit p {
+  margin-top: 20px;
+  padding-bottom: 35px;
 }
 
 main #work {
@@ -770,10 +815,141 @@ header nav {
   background-image: url("../img/404.png");
 }
 
-@media (min-width: 768px) {
-  /**
+/**
  * Less file for tablets
  */
+@media (min-width: 768px) {
+  header {
+    position: relative;
+  }
+  header .mask {
+    display: none;
+  }
+  header h1 {
+    margin-top: -20%;
+    font-size: 45px;
+  }
+  header nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    background-color: #F9F9F2;
+    border-bottom: 1px solid #f7d635;
+    width: 100%;
+    outline: none;
+  }
+  header nav a {
+    padding: 15px 15px 15px 10px;
+    display: block;
+    white-space: nowrap;
+    color: #f7d635;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Lato', cursive;
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  header nav a:hover {
+    color: #f7d635;
+    text-decoration: none;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #team {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    background-image: url("../img/MockUp.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main #team h2 {
+    width: 100%;
+  }
+  main #team figure {
+    width: 30%;
+    margin-bottom: 150px;
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #team figure img {
+    border-radius: 50%;
+    width: 80%;
+  }
+  main #team figure figcaption {
+    color: black;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px;
+  }
+  main #story {
+    margin-bottom: 50px;
+    width: 85%;
+  }
+  main #story p {
+    padding-bottom: 45px;
+  }
+  main #spirit {
+    margin-bottom: 75px;
+  }
+  main #spirit h2 {
+    margin-top: 15px;
+  }
+  main #spirit p {
+    padding-bottom: 45px;
+  }
+  main #work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-image: url("../img/mock.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main #work h2 {
+    width: 100%;
+  }
+  main #work article {
+    width: 30%;
+    margin-bottom: 75px;
+  }
+  main .user-message {
+    font-size: 45px;
+  }
+  footer {
+    margin-top: -50px;
+  }
 }
 
 /**
@@ -848,6 +1024,22 @@ header nav {
     width: 30%;
     margin-bottom: 150px;
     margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #team figure img {
+    border-radius: 50%;
+    width: 80%;
+  }
+  main #team figure figcaption {
+    color: black;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px;
   }
   main #story {
     margin-bottom: 50px;
@@ -886,17 +1078,150 @@ header nav {
   }
   main #work article {
     width: 30%;
+    margin-bottom: 75px;
+  }
+  main .user-message {
+    font-size: 45px;
+  }
+  footer {
+    margin-top: -50px;
   }
 }
 
-@media (min-width: 1200px) {
-  /**
+/**
  * Less file for large desktops
  */
-  #story {
+@media (min-width: 1200px) {
+  header {
+    position: relative;
+  }
+  header .mask {
+    display: none;
+  }
+  header h1 {
+    margin-top: -20%;
+    font-size: 45px;
+  }
+  header nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    background-color: #F9F9F2;
+    border-bottom: 1px solid #f7d635;
+    width: 100%;
+    outline: none;
+  }
+  header nav a {
+    padding: 15px 15px 15px 10px;
+    display: block;
+    white-space: nowrap;
+    color: #f7d635;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Lato', cursive;
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  header nav a:hover {
+    color: #f7d635;
+    text-decoration: none;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #team {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background-image: url("../img/MockUp.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main #team h2 {
+    width: 100%;
+  }
+  main #team figure {
+    width: 30%;
+    margin-bottom: 150px;
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #team figure img {
+    border-radius: 50%;
+    width: 80%;
+  }
+  main #team figure figcaption {
+    color: black;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px;
+  }
+  main #story {
+    margin-bottom: 50px;
+    width: 85%;
+  }
+  main #story p {
+    padding-bottom: 45px;
+  }
+  main #spirit {
+    margin-bottom: 75px;
+  }
+  main #spirit h2 {
+    margin-top: 15px;
+  }
+  main #spirit p {
+    padding-bottom: 45px;
+  }
+  main #work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-image: url("../img/mock.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main #work h2 {
+    width: 100%;
+  }
+  main #work article {
+    width: 30%;
+    margin-bottom: 75px;
+  }
+  main .user-message {
+    font-size: 45px;
+  }
+  footer {
+    margin-top: -50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

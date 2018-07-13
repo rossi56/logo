@@ -152,7 +152,6 @@ input[type="button"].icon:before,
     -o-transform: translateY(-40px);
     transform: translateY(-40px);
     /* Force Hardware Acceleration in WebKit */
-   
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
@@ -166,7 +165,6 @@ input[type="button"].icon:before,
     padding: 3em 1em;
     padding-top: 1em;
 }
-
 
 .cd-popup-container .cd-popup-close {
     position: absolute;
@@ -429,14 +427,33 @@ main {
     #team {
         text-align: center;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
         flex-wrap: wrap;
+        figure {
+            width: 50%;
+            margin-bottom: 50px;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            img {
+                border-radius: 50%;
+                width: 80%;
+            }
+            figcaption {
+                color: black;
+                font-size: 20px;
+                font-family: $font1;
+                margin-top: 15px;
+            }
+        }
     }
     #story {
+        width: 85%;
         text-align: center;
         display: flex;
         flex-direction: column;
-        align-content: center;
+        align-self: center;
         background: rgba(147, 206, 222, 1);
         background: -moz-linear-gradient(-45deg, rgba(147, 206, 222, 1) 0%, rgba(147, 206, 222, 1) 38%, rgba(73, 165, 191, 1) 100%);
         background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(147, 206, 222, 1)), color-stop(38%, rgba(147, 206, 222, 1)), color-stop(100%, rgba(73, 165, 191, 1)));
@@ -446,9 +463,14 @@ main {
         background: linear-gradient(135deg, rgba(147, 206, 222, 1) 0%, rgba(147, 206, 222, 1) 38%, rgba(73, 165, 191, 1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1);
         color: rgb(85, 80, 80);
-    h2{
-        color: white;
-    }
+        h2 {
+            color: white;
+            margin-top: 15px;
+        }
+        p {
+            margin-top: 20px;
+            padding-bottom: 35px;
+        }
     }
     #spirit {
         align-self: center;
@@ -459,7 +481,13 @@ main {
         flex-direction: column;
         align-content: space-around;
         border: 3px solid $colorSite;
-      
+        h2 {
+            margin-top: 15px;
+        }
+        p {
+            margin-top: 20px;
+            padding-bottom: 35px;
+        }
     }
     #work {
         text-align: center;

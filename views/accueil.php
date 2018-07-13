@@ -44,21 +44,21 @@
         <section id="team">
                 <h2>La Team</h2>
             <figure>
-                <img src="https://picsum.photos/200/200/?random" alt="">
+                <img src="public/img/photo.png" alt="">
                 <figcaption>
                     Sébastien Champalaune
                     <br> 39 ans
                 </figcaption>
             </figure>
             <figure>
-                <img src="https://picsum.photos/200/200/?random" alt="">
+                <img src="public/img/photo.png" alt="">
                 <figcaption>
                     Sébastien Champalaune
                     <br> 39 ans
                 </figcaption>
             </figure>
             <figure>
-                <img src="https://picsum.photos/200/200/?random" alt="">
+                <img src="public/img/photo.png" alt="">
                 <figcaption>
                     Sébastien Champalaune
                     <br> 39 ans

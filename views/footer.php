@@ -4,7 +4,7 @@
         </h3>
         <hr>
         <div class="contact">
-            <h4>Adresse</h4>
+            <h4>Nous rendre visite</h4>
             <p class="adress">Connect'Lab
                 <br> 16 rue du Bocage
                 <br> 56000 Vannes </p>

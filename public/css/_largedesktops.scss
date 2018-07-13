@@ -1,8 +1,115 @@
 /**
  * Less file for large desktops
  */
-#story{
-    background-image: url('../img/MockUp.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+
+@media (min-width: 1200px) {
+    header {
+        position: relative;
+        .mask {
+            display: none;
+        }
+        h1 {
+            margin-top: -20%;
+            font-size: 45px;
+        }
+        nav {
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            visibility: visible;
+            display: flex;
+            height: 50px;
+            background-color: #F9F9F2;
+            border-bottom: 1px solid $colorSite;
+            width: 100%;
+            outline: none;
+            a {
+                padding: 15px 15px 15px 10px;
+                display: block;
+                white-space: nowrap;
+                color: $colorSite;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: 'Lato', cursive;
+                -webkit-transition: 0.25s ease-in-out;
+                transition: 0.25s ease-in-out;
+                &:hover {
+                    color: $colorSite;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #team {
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background-image: url('../img/MockUp.png');
+            background-size: cover;
+            background-attachment: fixed;
+            h2 {
+                width: 100%;
+            }
+            figure {
+                width: 30%;
+                margin-bottom: 150px;
+                margin-top: 100px;
+                display: flex;
+                align-items: center;
+                img {
+                    border-radius: 50%;
+                    width: 80%;
+                }
+                figcaption {
+                    color: black;
+                    font-size: 20px;
+                    font-family: $font1;
+                    margin-top: 15px;
+                }
+            }
+        }
+        #story {
+            margin-bottom: 50px;
+            width: 85%;
+            p {
+                padding-bottom: 45px;
+            }
+        }
+        #spirit {
+            margin-bottom: 75px;
+            h2 {
+                margin-top: 15px;
+            }
+            p {
+                padding-bottom: 45px;
+            }
+        }
+        #work {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            background-image: url('../img/mock.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            h2 {
+                width: 100%;
+            }
+            article {
+                width: 30%;
+                margin-bottom: 75px;
+            }
+        }
+        .user-message {
+            font-size: 45px;
+        }
+    }
+    footer {
+        margin-top: -50px;
+    }
 }
