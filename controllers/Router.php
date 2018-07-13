@@ -31,16 +31,12 @@ class Router {
     try 
     {
       if (isset($_GET['action']))
-       {
-        
+      {
         if ($_GET['action'] == 'Accueil') 
         {  
-          
-               require ('views/accueil.php');
-           
-        
+          require ('views/accueil.php');
         }
-        elseif ($_POST['action'] == 'Contact') 
+        elseif ($_GET['action'] == 'Contact') 
         {
           if(empty($_POST))
           {
@@ -48,22 +44,18 @@ class Router {
           }
           else
           {
-              extract($_POST);
-              $this->contact->contact($email, $nom, $texte); 
-          }          
-                          
+            extract($_POST);
+            $this->contact->contact($email, $nom, $texte); 
+          }                           
         }
-       
-            }
-                else
-                throw new \Exception("Erreur 404 -Page Introuvable");        
-            }
-      catch (\Exception $e) 
-      {
-        $errors = $e->getMessage();
-        require('views/Accueil.php');
       }
+          else
+          throw new \Exception("Erreur 404 -Page Introuvable");        
+    }
+    catch (\Exception $e) 
+    {
+      $errors = $e->getMessage();
+      require('views/accueil.php');
+    }
     }
 }
-
- 

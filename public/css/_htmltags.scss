@@ -152,7 +152,7 @@ input[type="button"].icon:before,
     -o-transform: translateY(-40px);
     transform: translateY(-40px);
     /* Force Hardware Acceleration in WebKit */
-    -webkit-backface-visibility: hidden;
+   
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;

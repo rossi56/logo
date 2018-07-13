@@ -1,6 +1,5 @@
 //Le header
 header {
-	position: relative;
 	height: 100%;
 	text-align: center; //Logo svg
 	h1{
@@ -18,6 +17,7 @@ header {
 		background: -ms-linear-gradient(-45deg, rgba(117, 189, 209, 1) 0%, rgba(117, 189, 209, 1) 54%, rgba(73, 165, 191, 1) 100%);
 		background: linear-gradient(135deg, rgba(117, 189, 209, 1) 0%, rgba(117, 189, 209, 1) 54%, rgba(73, 165, 191, 1) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75bdd1', endColorstr='#49a5bf', GradientType=1);
+		
 	} //La nav
 	nav {
 		visibility: hidden;
@@ -142,3 +142,8 @@ header {
 	transition: opacity 0.5s ease-in-out;
 } 
 
+// Page d'erreur
+
+.error{
+	background-image: url('../img/404.png');
+}

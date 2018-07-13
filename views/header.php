@@ -36,7 +36,7 @@
         </div>
         <h1>Connect'Lab</h1>
         <div class="burger">
-            <svg width="100px" height="100px">
+            <svg >
                 <path class="top" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80"></path>
                 <path class="middle" d="M 30 50 L 70 50"></path>
                 <path class="bottom" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20"></path>

@@ -17,6 +17,10 @@ time, mark, audio {
 	font-size: 100%;
 	font: inherit;
   vertical-align: baseline;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
 }
 
 article, aside, details, figcaption, figure, 

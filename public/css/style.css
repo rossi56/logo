@@ -21,6 +21,9 @@ time, mark, audio {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
 }
 
 article, aside, details, figcaption, figure,
@@ -202,7 +205,6 @@ input[type="button"].icon:before,
   -webkit-transform: translateY(-40px);
   transform: translateY(-40px);
   /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -603,7 +605,6 @@ footer .social .fas-enveloppe {
 }
 
 header {
-  position: relative;
   height: 100%;
   text-align: center;
 }
@@ -765,17 +766,35 @@ header nav {
   transition: opacity 0.5s ease-in-out;
 }
 
+.error {
+  background-image: url("../img/404.png");
+}
+
 @media (min-width: 768px) {
   /**
  * Less file for tablets
  */
 }
 
-@media (min-width: 992px) {
-  /**
+/**
  * sassfile for desktops
  */
-  nav {
+@media (min-width: 992px) {
+  header {
+    position: relative;
+  }
+  header .mask {
+    display: none;
+  }
+  header h1 {
+    margin-top: -20%;
+    font-size: 45px;
+  }
+  header nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    visibility: visible;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -785,10 +804,10 @@ header nav {
     width: 100%;
     outline: none;
   }
-  nav a {
+  header nav a {
+    padding: 15px 15px 15px 10px;
     display: block;
     white-space: nowrap;
-    padding: 25px;
     color: #f7d635;
     text-decoration: none;
     font-size: 18px;
@@ -796,40 +815,77 @@ header nav {
     -webkit-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
   }
-  nav a:hover {
+  header nav a:hover {
     color: #f7d635;
     text-decoration: none;
   }
-}
-
-@media screen and (min-width: 992px) and (max-width: 62em) {
-  nav a {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 48em) {
-  nav a {
-    opacity: 0;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 48em) {
-  nav {
+  main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #team {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px;
+    background-image: url("../img/MockUp.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main #team h2 {
+    width: 100%;
+  }
+  main #team figure {
+    width: 30%;
+    margin-bottom: 150px;
+    margin-top: 100px;
+  }
+  main #story {
+    margin-bottom: 50px;
+    width: 85%;
+  }
+  main #story p {
+    padding-bottom: 45px;
+  }
+  main #spirit {
+    margin-bottom: 75px;
+  }
+  main #spirit h2 {
+    margin-top: 15px;
+  }
+  main #spirit p {
+    padding-bottom: 45px;
+  }
+  main #work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-transition: 0.35s ease-in-out;
-    transition: 0.35s ease-in-out;
-    height: 100%;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-image: url("../img/mock.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main #work h2 {
+    width: 100%;
+  }
+  main #work article {
+    width: 30%;
   }
 }
 
@@ -837,5 +893,10 @@ header nav {
   /**
  * Less file for large desktops
  */
+  #story {
+    background-image: url("../img/MockUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 /*# sourceMappingURL=style.css.map */

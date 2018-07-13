@@ -81,18 +81,7 @@
                     fuga odio at. Corrupti, delectus incidunt repudiandae tenetur illum distinctio ullam. Soluta, atque nemo
                     ratione error quod excepturi laborum minima ea deserunt veritatis, deleniti, voluptates delectus necessitatibus
                     similique consequuntur obcaecati molestias commodi debitis quia? Expedita, inventore qui ducimus id deserunt
-                    omnis? Molestias praesentium id a voluptates autem magnam, quisquam incidunt fuga vel soluta eos totam
-                    eaque architecto vero? Omnis consectetur adipisci asperiores animi, eaque officia, praesentium sequi
-                    deleniti, consequatur minus autem! Suscipit consequatur deserunt aliquam enim, odit repellat velit amet
-                    corporis illum, labore sint accusamus? Nisi dolor unde magnam, sed eligendi vel aspernatur assumenda!
-                    Qui, provident. Pariatur sed magnam voluptatem eaque. Vero, assumenda illo consectetur necessitatibus
-                    magnam quidem quo, debitis, officia sed nobis itaque ut provident a dolor quia eaque. Voluptatem, facere
-                    illum. Adipisci provident autem incidunt illo earum molestias omnis? Ullam eius accusantium voluptas
-                    aliquam blanditiis eos eveniet perspiciatis, natus quaerat cum delectus atque magni consequuntur modi
-                    autem totam, voluptatibus nobis dolorem consequatur enim? Numquam ipsum odit eos est dolores? Nisi beatae
-                    totam neque, autem, accusantium doloremque necessitatibus eos quasi et atque, deleniti inventore cum
-                    odio perspiciatis quibusdam in. Pariatur natus, sunt atque itaque magnam dolorem ducimus nemo repudiandae
-                    molestiae.
+                   
                 </p>
             </article>
         </section>

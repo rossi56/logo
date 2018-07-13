@@ -1,51 +1,100 @@
 /**
  * sassfile for desktops
  */
- nav {
-    display: flex;
-    height: 50px;
-    background-color: #F9F9F2;
-    border-bottom: 1px solid $colorSite;
-    width: 100%; // position: fixed;
-    outline: none;
-   
-    
- 
-    a {
-        display: block;
-        white-space: nowrap;
-        padding: 25px;
-        color: $colorSite;
-        text-decoration: none;
-        font-size: 18px;
-        font-family: 'Lato', cursive;
-        -webkit-transition: 0.25s ease-in-out;
-        transition: 0.25s ease-in-out;
-        &:hover {
-            color: $colorSite;
-            text-decoration: none;
+
+@media (min-width: 992px) {
+    header {
+        position: relative;
+        .mask {
+            display: none;
         }
-        @media screen and (max-width: 62em) {
-            font-size: 14px;
+        h1 {
+            margin-top: -20%;
+            font-size: 45px;
         }
-        @media screen and (max-width: 48em) {
-            opacity: 0;
+        nav {
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            visibility: visible;
+            display: flex;
+            height: 50px;
+            background-color: #F9F9F2;
+            border-bottom: 1px solid $colorSite;
+            width: 100%;
+            outline: none;
+            a {
+                padding: 15px 15px 15px 10px;
+                display: block;
+                white-space: nowrap;
+                color: $colorSite;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: 'Lato', cursive;
+                -webkit-transition: 0.25s ease-in-out;
+                transition: 0.25s ease-in-out;
+                &:hover {
+                    color: $colorSite;
+                    text-decoration: none;
+                }
+            }
         }
     }
-    @media screen and (max-width: 48em) {
-        display: -webkit-box;
-        display: -ms-flexbox;
+    main {
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -ms-flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        #team {
+            width: 100%;
+            display: flex;
+            margin-bottom: 50px;
+            background-image: url('../img/MockUp.png');
+            background-size: cover;
+            background-attachment: fixed;
+            h2 {
+                width: 100%;
+            }
+            figure {
+                width: 30%;
+                margin-bottom: 150px;
+            margin-top: 100px;
+
+            }
+        }
+        #story {
+            margin-bottom: 50px;
+            width: 85%;
+            p {
+                padding-bottom: 45px;
+            }
+        }
+        #spirit {
+            margin-bottom: 75px;
+            h2 {
+                margin-top: 15px;
+            }
+            p {
+                padding-bottom: 45px;
+            }
+        }
+        #work {
+            display: flex;
             flex-wrap: wrap;
-        -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-        -webkit-transition: 0.35s ease-in-out;
-        transition: 0.35s ease-in-out;
-        height: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            background-image: url('../img/mock.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            h2 {
+                width: 100%;
+            }
+            article {
+                width: 30%;
+            }
+        }
+    }
+    footer{
+      
     }
 }
+
